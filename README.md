@@ -15,7 +15,6 @@ This module prepares raw solubility data for training.
 - Includes temperature (`T`) and target solubility (`logS`)  
 - Saves processed dataset as a `.pkl` file  
 
----
 
 ### 2. Dataset & Feature Construction
 
@@ -26,8 +25,6 @@ This module prepares raw solubility data for training.
   - Bond features  
   - Molecular descriptors  
 - Temperature is explicitly included as an input variable  
-
----
 
 ### 3. Model Architecture (`code/models`)
 
@@ -65,7 +62,6 @@ This file contains visualization results for **47 solute–solvent pairs**, comp
 - Fastprop + FiLM  
 
 
----
 
 
 
