@@ -64,17 +64,15 @@ The models are based on **Directed Message Passing Neural Network (D-MPNN)** and
 
 This file contains visualization results for **47 solute–solvent pairs** (File name: `'Solute name'_'Solvent name'.png`):
 
-#### Chemprop
-- Experimental solubility  
+#### In `Chemprop` folder, each file compare expermental solubility with:
 - SAFT-γ Mie  
 - Chemprop  
-- Chemprop + FiLM
+- Chemprop w/FiLM
 
-#### Fastprop
-- Experimental solubility  
+#### In `Fastprop` folder, each file compare expermental solubility with:
 - SAFT-γ Mie 
 - Fastprop  
-- Fastprop + FiLM  
+- Fastprop w/FiLM  
 
 
 
