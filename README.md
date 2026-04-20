@@ -1,6 +1,17 @@
 # T-conditioned_moleular_representation
-Temperature-conditioned molecular representation for organic solubility prediction [code, results]
-
+1) Code
+   - preprocessing
+     -- csv_to_pkl.py:
+     -- custom_dataset_single.py:
+     -- fastprop_csv_dataset.py:
+     -- feature_vectors.py:
+   - models
+     -- chemprop.py:
+     -- Fastprop.py:
+     
+2) 47_pairs_result_graph
+   - Chemprop
+   - Fastprop
 
 ---
 
