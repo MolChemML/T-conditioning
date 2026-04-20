@@ -1,10 +1,12 @@
-# T-conditioned_moleular_representation
+# T-conditioned_molecular_representation
+This repository implements temperature-conditioned molecular representations for predicting organic solubility across varying temperatures.
+
 1) Code
    - preprocessing
-     - csv_to_pkl.py: import `.csv` data file and save `.pkl` file
-     - custom_dataset_single.py: dataset for Chemprop-based modeling 
-     - fastprop_csv_dataset.py: dataset for Fastprop-based modeling 
-     - feature_vectors.py: feature selection for graph construction
+     - csv_to_pkl.py: Converts `.csv` data into `.pkl` format for efficient loading
+     - custom_dataset_single.py: Dataset class for Chemprop-based models
+     - fastprop_csv_dataset.py: Dataset class for Fastprop-based models
+     - feature_vectors.py: Feature construction for molecular graph representation
    - models
      - chemprop: model architecture information (Chemprop, Chemprop w/FiLM)
      - fastprop: model architecture information (Fastprop, Fastprop w/FiLM)
@@ -38,7 +40,8 @@ Second,
 
 ### 2. Model Architecture (`code/models`)
 
-The models are based on **Directed Message Passing Neural Network (D-MPNN)** and **descriptors** with temperature conditioning.
+The models are based on **Directed Message Passing Neural Network (D-MPNN)** and **descriptors** with temperature conditioning vial FiLM.
+This allows continuous modulation of molecular representations with respect to temperature.
 
 #### Key Components
 
@@ -46,12 +49,11 @@ The models are based on **Directed Message Passing Neural Network (D-MPNN)** and
   - Separate encoders for solute and solvent  
 
 - **Temperature Encoding**
-  - Gaussian RBF expansion  
-  - Projection into latent feature space  
+  - Scalar temperature is expanded using Gaussian RBF 
 
 - **FiLM (Feature-wise Linear Modulation)**
-  - Applies temperature-dependent scaling and shifting  
-  - Enables continuous conditioning  
+  - Learns feature-wise scaling (γ) and shifting (β) based on temperature  
+  - Applied to both solute and solvent representations  
 
 - **Prediction Head**
   - Outputs predicted log solubility  
@@ -60,21 +62,32 @@ The models are based on **Directed Message Passing Neural Network (D-MPNN)** and
 
 ## Application Study Results
 
-`47_pairs_result_graph.zip`
+The file `47_pairs_result_graph.zip` contains visualization results for 47 solute–solvent pairs.
 
-This file contains visualization results for **47 solute–solvent pairs** (File name: `'Solute name'_'Solvent name'.png`):
+Each plot shows:
+- Experimental solubility (ground truth)
+- SAFT-γ Mie predictions
+- Baseline model predictions
+- T-conditioned model predictions
 
-#### In `Chemprop` folder, each file compare expermental solubility with:
+File naming:
+'SoluteName_SolventName.png'
+
+
+#### In `Chemprop` folder, each file compares experimental solubility with:
 - SAFT-γ Mie  
 - Chemprop  
 - Chemprop w/FiLM
 
-#### In `Fastprop` folder, each file compare expermental solubility with:
+#### In `Fastprop` folder, each file compares experimental solubility with:
 - SAFT-γ Mie 
 - Fastprop  
 - Fastprop w/FiLM  
 
+---
 
-
+## Citation
+If you use this work, please cite:
+[Will be updated]
 
 
