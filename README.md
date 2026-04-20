@@ -67,22 +67,11 @@ The file `47_pairs_result_graph.zip` contains visualization results for 47 solut
 Each plot shows:
 - Experimental solubility (ground truth)
 - SAFT-γ Mie predictions
-- Baseline model predictions
-- T-conditioned model predictions
+- Baseline model predictions (Chemprop, Fastprop)
+- T-conditioned model predictions (Chemprop w/FiLM, Fastprop w/FiLM)
 
 File naming:
 'SoluteName_SolventName.png'
-
-
-#### In `Chemprop` folder, each file compares experimental solubility with:
-- SAFT-γ Mie  
-- Chemprop  
-- Chemprop w/FiLM
-
-#### In `Fastprop` folder, each file compares experimental solubility with:
-- SAFT-γ Mie 
-- Fastprop  
-- Fastprop w/FiLM  
 
 ---
 
