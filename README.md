@@ -77,6 +77,14 @@ File naming:
 
 ## Citation
 If you use this work, please cite:
-[Will be updated]
+
+@article{joo2026temperature,
+  title={Temperature-conditioned molecular representation for organic solubility prediction},
+  author={Joo, Chonghyo and Lee, Lauren Ye Seol},
+  journal={Chemical Engineering Journal},
+  pages={180019},
+  year={2026},
+  publisher={Elsevier}
+}
 
 
